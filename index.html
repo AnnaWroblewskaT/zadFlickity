@@ -13,16 +13,12 @@
 
 <body>
 
-    <p>
-        <a href="#carousel-cell1">1</a>
-        <a href="#carousel-cell2">2</a>
-        <a href="#carousel-cell3">3</a>
-        <a href="#carousel-cell4">4</a>
-        <a href="#carousel-cell5">5</a>
-    </p>
+
+
+    <button class="restart">Restart</button>
 
     <div class="main-carousel" data-flickity='{ "hash": true }'>
-        <div class="carousel-cell" style="background-image:url(images/1.jpg)" id="carousel-cell1">
+        <div class="carousel-cell initial" style="background-image:url(images/1.jpg)" id="carousel-cell1">
             <div class="container">Obrazek 1</div>
         </div>
         <div class="carousel-cell" style="background-image:url(images/2.jpg)" id="carousel-cell2">
@@ -39,9 +35,19 @@
         </div>
     </div>
 
-    <script src="js/hash.js"></script>
-    <script src="vendor/flickity.pkgd.min.js"></script>
+    <div class="progress-bar"></div>
 
+    <p>
+        <a href="#carousel-cell1">1</a>
+        <a href="#carousel-cell2">2</a>
+        <a href="#carousel-cell3">3</a>
+        <a href="#carousel-cell4">4</a>
+        <a href="#carousel-cell5">5</a>
+    </p>
+
+
+    <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="vendor/hash.js"></script>
     <script src="js/script.js"></script>
 
 </body>

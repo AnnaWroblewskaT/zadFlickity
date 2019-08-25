@@ -41,6 +41,7 @@
     },
     "homepage": "https://github.com/AnnaWroblewskaT/system_admin#readme",
     "dependencies": {
+        "flickity-hash": "^1.0.3",
         "normalize.css": "^8.0.1"
     }
 }
