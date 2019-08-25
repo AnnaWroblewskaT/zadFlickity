@@ -6,9 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
+
+    <p>
+        <a href="#carousel-cell1">1</a>
+        <a href="#carousel-cell2">2</a>
+        <a href="#carousel-cell3">3</a>
+        <a href="#carousel-cell4">4</a>
+        <a href="#carousel-cell5">5</a>
+    </p>
+
+    <div class="main-carousel" data-flickity='{ "hash": true }'>
+        <div class="carousel-cell" style="background-image:url(images/1.jpg)" id="carousel-cell1">
+            <div class="container">Obrazek 1</div>
+        </div>
+        <div class="carousel-cell" style="background-image:url(images/2.jpg)" id="carousel-cell2">
+            <div class="container">Obrazek 2</div>
+        </div>
+        <div class="carousel-cell" style="background-image:url(images/3.jpg)" id="carousel-cell3">
+            <div class="container">Obrazek 3</div>
+        </div>
+        <div class="carousel-cell" style="background-image:url(images/4.jpg)" id="carousel-cell4">
+            <div class="container">Obrazek 4</div>
+        </div>
+        <div class="carousel-cell" style="background-image:url(images/5.jpg)" id="carousel-cell5">
+            <div class="container">Obrazek 5</div>
+        </div>
+    </div>
+
+    <script src="js/hash.js"></script>
+    <script src="vendor/flickity.pkgd.min.js"></script>
+
+    <script src="js/script.js"></script>
 
 </body>
 

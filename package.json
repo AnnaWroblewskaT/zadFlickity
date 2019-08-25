@@ -40,5 +40,7 @@
         "url": "https://github.com/AnnaWroblewskaT/system_admin/issues"
     },
     "homepage": "https://github.com/AnnaWroblewskaT/system_admin#readme",
-    "dependencies": {}
+    "dependencies": {
+        "normalize.css": "^8.0.1"
+    }
 }
