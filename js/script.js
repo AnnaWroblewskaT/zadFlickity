@@ -1,3 +1,20 @@
+var slidesTemp = document.getElementById('slide-template').innerHTML;
+
+Mustache.parse(slidesTemp);
+
+var slidesList = '';
+
+for (var i = 0; i < slides.length; i++) {
+
+    slidesList += Mustache.render(slidesTemp, slides[i]);
+}
+
+
+
+var container = document.getElementById('mainCarousel');
+
+container.insertAdjacentHTML('beforeend', slidesList);
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity(elem, {
 

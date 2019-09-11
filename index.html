@@ -15,27 +15,15 @@
 
 
 
-    <button class="restart">Restart</button>
 
-    <div class="main-carousel carousel" data-flickity='{ "hash": true }'>
-        <div class="carousel-cell initial" style="background-image:url(images/1.jpg)" id="carousel-cell1">
-            <div class="container">Obrazek 1</div>
-        </div>
-        <div class="carousel-cell" style="background-image:url(images/2.jpg)" id="carousel-cell2">
-            <div class="container">Obrazek 2</div>
-        </div>
-        <div class="carousel-cell" style="background-image:url(images/3.jpg)" id="carousel-cell3">
-            <div class="container">Obrazek 3</div>
-        </div>
-        <div class="carousel-cell" style="background-image:url(images/4.jpg)" id="carousel-cell4">
-            <div class="container">Obrazek 4</div>
-        </div>
-        <div class="carousel-cell" style="background-image:url(images/5.jpg)" id="carousel-cell5">
-            <div class="container">Obrazek 5</div>
-        </div>
+
+    <div id="mainCarousel" class="main-carousel carousel">
+
+
     </div>
 
     <div class="progress-bar"></div>
+    <button class="restart">Restart</button>
 
     <p>
         <a href="#carousel-cell1">1</a>
@@ -46,8 +34,53 @@
     </p>
 
 
+
+    <script id="slide-template" type="x-tmpl-mustache">
+        <div class="carousel-cell" id="{{ id }}" style="background-image: url({{ image }})">
+        <div class="container">
+            <h2>{{ title }}</h2>
+            {{{ description }}}
+        </div>
+    </div>
+    </script>
+    <script>
+        var slides = [{
+                id: "cell1",
+                image: 'images/1.jpg',
+                title: 'Title 1',
+                description: "<p> paragraph content </p> <img src='https://via.placeholder.com/35'>"
+            },
+            {
+                id: "cell2",
+                image: 'images/2.jpg',
+                title: 'Title 2',
+                description: "<p> paragraph content 2 </p> <img src='https://via.placeholder.com/35'>"
+            },
+            {
+                id: "cell3",
+                image: 'images/3.jpg',
+                title: 'Title 3',
+                description: "<p> paragraph content 3 </p> <img src='https://via.placeholder.com/35'> "
+            },
+
+            {
+                id: "cell4",
+                image: 'images/4.jpg',
+                title: 'Title 4',
+                description: "<p> paragraph content 4 </p> <img src='https://via.placeholder.com/35'> "
+            },
+
+            {
+                id: "cell5",
+                image: 'images/5.jpg',
+                title: 'Title 5',
+                description: "<p> paragraph content 5 </p> <img src='https://via.placeholder.com/35'> "
+            }
+        ];
+    </script>
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>
+    <script src="mustache/mustache.js"></script>
     <script src="js/script.js"></script>
 
 </body>
