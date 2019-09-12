@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Flickity&Mustache</title>
     <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -15,15 +15,15 @@
 
 
 
+    <button class="restart">Restart</button>
 
-
-    <div id="mainCarousel" class="main-carousel carousel">
+    <div id="mainCarousel" class="main-carousel carousel" data-flickity='{ "hash": true }'>
 
 
     </div>
 
     <div class="progress-bar"></div>
-    <button class="restart">Restart</button>
+
 
     <p>
         <a href="#carousel-cell1">1</a>
@@ -36,7 +36,7 @@
 
 
     <script id="slide-template" type="x-tmpl-mustache">
-        <div class="carousel-cell" id="{{ id }}" style="background-image: url({{ image }})">
+        <div class="carousel-cell {{ class }}" id="{{ id }}" style="background-image: url({{ image }})"  >
         <div class="container">
             <h2>{{ title }}</h2>
             {{{ description }}}
@@ -45,33 +45,34 @@
     </script>
     <script>
         var slides = [{
-                id: "cell1",
+                id: "carousel-cell1",
                 image: 'images/1.jpg',
                 title: 'Title 1',
-                description: "<p> paragraph content </p> <img src='https://via.placeholder.com/35'>"
+                description: "<p> paragraph content </p> <img src='https://via.placeholder.com/35'>",
+                class: 'initial'
             },
             {
-                id: "cell2",
+                id: "carousel-cell2",
                 image: 'images/2.jpg',
                 title: 'Title 2',
                 description: "<p> paragraph content 2 </p> <img src='https://via.placeholder.com/35'>"
             },
             {
-                id: "cell3",
+                id: "carousel-cell3",
                 image: 'images/3.jpg',
                 title: 'Title 3',
                 description: "<p> paragraph content 3 </p> <img src='https://via.placeholder.com/35'> "
             },
 
             {
-                id: "cell4",
+                id: "carousel-cell4",
                 image: 'images/4.jpg',
                 title: 'Title 4',
                 description: "<p> paragraph content 4 </p> <img src='https://via.placeholder.com/35'> "
             },
 
             {
-                id: "cell5",
+                id: "carousel-cell5",
                 image: 'images/5.jpg',
                 title: 'Title 5',
                 description: "<p> paragraph content 5 </p> <img src='https://via.placeholder.com/35'> "
