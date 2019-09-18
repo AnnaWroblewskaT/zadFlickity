@@ -38,3 +38,33 @@ flkty.on('scroll', function (progress) {
     progress = Math.max(0, Math.min(1, progress));
     progressBar.style.width = progress * 100 + '%';
 });
+
+window.initMap = function () {
+
+
+    // var uluru = {
+    //     lat: -18.344,
+    //     lng: 10.036
+    // };
+
+    var map = new google.maps.Map(
+        document.getElementById('map'), {
+            zoom: 4,
+            center: slides[0].coords
+        });
+
+    var marker = [];
+
+    for (let i = 0; i < slides.length; i++) {
+        marker.push(new google.maps.Marker({
+            position: slides[i].coords,
+            map: map
+        }))
+
+        marker[i].addListener("click", function () {
+            flkty.select(i);
+        })
+    }
+
+
+}

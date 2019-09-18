@@ -6,12 +6,14 @@
 
 .carousel-cell {
   width: 100%;
-  height: 50vh;
+  height: 300px;
   min-height: 250px;
   margin-right: 10px;
   background-size: cover;
 
 }
+
+
 
 .container {
   color: whitesmoke;
@@ -36,4 +38,14 @@
   height: 20px;
   width: 0;
   background: #333;
+}
+
+p {
+  display: none;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+  background-color: grey;
 }
